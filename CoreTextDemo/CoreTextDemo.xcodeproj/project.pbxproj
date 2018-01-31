@@ -10,6 +10,7 @@
 		F3026FA9202045A40050CBEF /* CTFrameParserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3026FA8202045A40050CBEF /* CTFrameParserConfig.swift */; };
 		F3026FAB202046850050CBEF /* CTFrameParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3026FAA202046850050CBEF /* CTFrameParser.swift */; };
 		F3026FAD202046C30050CBEF /* CoreTextData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3026FAC202046C30050CBEF /* CoreTextData.swift */; };
+		F34A57002021B89C00D3B6C9 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = F34A56FF2021B89C00D3B6C9 /* content.json */; };
 		F362F3DF2020571900DD63C6 /* UIView+frameAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = F362F3DE2020571900DD63C6 /* UIView+frameAdjust.m */; };
 		F3C2964320201019007882C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C2964220201019007882C7 /* AppDelegate.swift */; };
 		F3C2964520201019007882C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C2964420201019007882C7 /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 		F3026FA8202045A40050CBEF /* CTFrameParserConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTFrameParserConfig.swift; sourceTree = "<group>"; };
 		F3026FAA202046850050CBEF /* CTFrameParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTFrameParser.swift; sourceTree = "<group>"; };
 		F3026FAC202046C30050CBEF /* CoreTextData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreTextData.swift; sourceTree = "<group>"; };
+		F34A56FF2021B89C00D3B6C9 /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
 		F362F3DC2020571800DD63C6 /* CoreTextDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreTextDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		F362F3DD2020571900DD63C6 /* UIView+frameAdjust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frameAdjust.h"; sourceTree = "<group>"; };
 		F362F3DE2020571900DD63C6 /* UIView+frameAdjust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frameAdjust.m"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				F3C2964920201019007882C7 /* Assets.xcassets */,
 				F3C2964B20201019007882C7 /* LaunchScreen.storyboard */,
 				F3C2964E20201019007882C7 /* Info.plist */,
+				F34A56FF2021B89C00D3B6C9 /* content.json */,
 			);
 			path = CoreTextDemo;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				F3C2964D20201019007882C7 /* LaunchScreen.storyboard in Resources */,
 				F3C2964A20201019007882C7 /* Assets.xcassets in Resources */,
 				F3C2964820201019007882C7 /* Main.storyboard in Resources */,
+				F34A57002021B89C00D3B6C9 /* content.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

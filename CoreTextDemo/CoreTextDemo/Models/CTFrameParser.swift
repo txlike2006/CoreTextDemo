@@ -12,10 +12,29 @@ class CTFrameParser: NSObject {
     
     class func parseContent(content: NSString, config: CTFrameParserConfig) -> CoreTextData {
         let attributes = self.attributesWithConfig(config: config)
-        let contentString = NSAttributedString(string: content as String, attributes: attributes as! [String : Any])
+        let contentString = NSAttributedString(string: content as String, attributes: attributes as? [String : Any])
         
         // 创建 CTFramesetterRef 实例
         let frameSetter = CTFramesetterCreateWithAttributedString(contentString)
+        
+        // 获得要绘制的区域的高度
+        let restrictSize = CGSize(width: config.width, height: CGFloat.greatestFiniteMagnitude)
+        let coreTextSize = CTFramesetterSuggestFrameSizeWithConstraints(frameSetter, CFRangeMake(0, 0), nil, restrictSize, nil)
+        let textHeight = coreTextSize.height
+        
+        // 生成 CTFrameRef 实例
+        let frame = self.createFrameWithFramesetter(framesetter: frameSetter, config: config, height: textHeight)
+        
+        // 将生成好的 CTFrameRef 实例和计算好的绘制高度保存到 CoreTextData 实例中，最后返回 CoreTextData 实例
+        let data = CoreTextData()
+        data.ctFrame = frame
+        data.height = textHeight
+        return data
+    }
+    
+    class func parseAttributedContent(content: NSAttributedString, config: CTFrameParserConfig) -> CoreTextData {
+        
+        let frameSetter = CTFramesetterCreateWithAttributedString(content)
         
         // 获得要绘制的区域的高度
         let restrictSize = CGSize(width: config.width, height: CGFloat.greatestFiniteMagnitude)
@@ -64,4 +83,5 @@ class CTFrameParser: NSObject {
         let frame = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, 0), path, nil)
         return frame
     }
+    
 }
